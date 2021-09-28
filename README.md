@@ -14,6 +14,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
 
 ## Overview
@@ -60,27 +61,21 @@ Instead of using <img> for the share icon, I used its <svg>, so I can change its
 </div>
 ```
 ```css
-.icon-bg {
-    background-color: var(--clr-main-bg);
-}
 
-.icon-bg-clicked {
+.icon-bg {
     background-color: var(--clr-p);
 }
-.grey-fill path {
-    fill: #6E8098;
-}
 
-.white-fill path {
+.fill path {
     fill: #fff;
 }
 ```
 ```js
-shareIcon.classList.toggle('white-fill');
-shareIcon.classList.toggle('icon-bg-clicked');
+shareIcon.classList.toggle('fill');
+shareIcon.classList.toggle('icon-bg');
 ```
 
-Used window.matchMedia to show the mobile/desktop tooltip.
+Instead of using matchMedia() to hide and show the tooltip, I changed it to using opacity with the help of transition.
 
 
 ### Continued development
@@ -97,3 +92,7 @@ I used two tooltips for the mobile and desktop version. The most challenging par
 
 - Github - [Erelita](https://github.com/erelita)
 - Frontend Mentor - [@erelita](https://www.frontendmentor.io/profile/erelita)
+
+## Acknowledgements
+
+The first version I posted was messy. It didn't function properly because of the matchMedia(). Reviewed and revised my HTML, CSS and JS files thanks to [Thiago Santos](https://www.frontendmentor.io/profile/thiago-hds). Learned a lot more while revising my code :)
